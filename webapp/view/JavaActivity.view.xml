@@ -1,6 +1,38 @@
-<mvc:View controllerName="sapui5javaactivity.controller.JavaActivity"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sapui5javaactivity.controller.JavaActivity">
+    
+    <Page id="page" title="Java Script Activity">
+           <VBox class="sapUiSmallMargin" id="vboxM">
+
+            <!-- Convert Numbers to Words -->
+            <Input id="inputNumber" placeholder="Enter number (1–999)" width="200px"/>
+            <Button text="Convert to Words" press="onConvert" class="sapUiSmallMargin" id="buttonNum"/>
+
+            <!-- Triangle Pattern -->
+            <Input id="inputHeight" placeholder="Enter triangle height" width="200px"/>
+            <Button text="Print Triangle" press="onPrintPattern" class="sapUiSmallMargin" id="buttonPrintTri"/>
+
+            <!-- X Pattern -->
+            <Input id="inputXHeight" placeholder="Enter X height (odd)" width="200px"/>
+            <Button text="Print X Pattern" press="onPrintXPattern" class="sapUiSmallMargin" id="buttonPrintX"/>
+
+            <!-- Triangle Perimeter -->
+            <HBox id="hboxPeri">
+                <Input id="sideA" placeholder="Side A" width="100px"/>
+                <Input id="sideB" placeholder="Side B" width="100px"/>
+                <Input id="sideC" placeholder="Side C" width="100px"/>
+            </HBox>
+            <Button text="Calculate Perimeter" press="onCalculatePerimeter" class="sapUiSmallMargin" id="buttonPeri"/>
+
+            <!-- Color Choices -->
+            <Button text="Show Color Choices" press="onShowColorChoices" class="sapUiSmallMargin" id="buttonColo"/>
+
+            <!-- Most Skilled Person -->
+            <Button text="Get Most Skilled Person" press="onFindMostSkilled" class="sapUiSmallMargin" id="buttonSkill"/>
+
+            <!-- Output Area -->
+            <TextArea id="textAreaOutput" rows="20" editable="false" width="100%"/>
+
+        </VBox>
+    </Page>    
+     
 </mvc:View>
